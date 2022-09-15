@@ -16,7 +16,7 @@ pipeline {
          }
          stage('Build') {
              steps {    
-                  sh 'gradle wrapper --gradle-version=5.1.1'
+                  sh 'java -version'
                   sh './gradlew clean build'
              }              
          }
