@@ -1,5 +1,8 @@
 pipeline {
      agent any
+     tools {
+        gradle "gradle"
+    }
      stages {
          stage('Clean Workspace') {
              steps {
@@ -13,7 +16,7 @@ pipeline {
          }
          stage('Build') {
              steps {                  
-                  sh './gradlew clean build'
+                  sh 'gradle clean build'
              }              
          }
      }
