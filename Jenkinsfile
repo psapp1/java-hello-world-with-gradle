@@ -18,7 +18,7 @@ pipeline {
              steps {    
                   echo "JAVA_HOME :::   $JAVA_HOME"
                   sh 'which java'
-                  sh 'gradle clean'
+                  sh 'gradle init --type java-library'
              }              
          }
      }
